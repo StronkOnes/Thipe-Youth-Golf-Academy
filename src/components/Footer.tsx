@@ -1,0 +1,54 @@
+
+
+import React from 'react';
+import { Link } from 'react-router-dom';
+import { WhatsAppIcon } from './icons';
+import TygaLogo from './TygaLogo';
+
+const Footer: React.FC = () => {
+  return (
+    <footer className="bg-black text-tyga-light border-t-4 border-tyga-secondary">
+      <div className="container mx-auto px-6 py-12">
+        <div className="grid md:grid-cols-4 gap-8">
+          <div className="md:col-span-1">
+             <Link to="/">
+                <TygaLogo className="h-16 w-auto mb-4" variant="light" />
+              </Link>
+            <p className="text-sm text-gray-400">
+                Promoting golf for personal development, leadership skills, sportsmanship, and teamwork
+            </p>
+          </div>
+          <div className="md:col-span-1">
+            <h3 className="font-bold font-display text-lg text-white mb-4">Quick Links</h3>
+            <ul className="space-y-2 text-gray-300">
+              <li><Link to="/about" className="hover:text-tyga-secondary transition-colors">About Us</Link></li>
+              <li><Link to="/events" className="hover:text-tyga-secondary transition-colors">Events</Link></li>
+              <li><Link to="/onboarding" className="hover:text-tyga-secondary transition-colors">Join TYGA</Link></li>
+              <li><Link to="/contact" className="hover:text-tyga-secondary transition-colors">Contact</Link></li>
+            </ul>
+          </div>
+          <div className="md:col-span-1">
+             <h3 className="font-bold font-display text-lg text-white mb-4">Connect</h3>
+            <ul className="space-y-2 text-gray-300">
+              <li><a href="#" className="hover:text-tyga-secondary transition-colors">Facebook</a></li>
+              <li><a href="#" className="hover:text-tyga-secondary transition-colors">Instagram</a></li>
+              <li><a href="#" className="hover:text-tyga-secondary transition-colors">LinkedIn</a></li>
+            </ul>
+          </div>
+          <div className="md:col-span-1">
+             <h3 className="font-bold font-display text-lg text-white mb-4">Get In Touch</h3>
+             <a href="https://wa.me/27123456789" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 bg-green-500 text-white font-semibold py-2 px-4 rounded-lg hover:bg-green-600 transition-colors">
+                <WhatsAppIcon className="h-5 w-5"/>
+                <span>WhatsApp Us</span>
+            </a>
+          </div>
+        </div>
+        <div className="mt-12 border-t border-gray-700 pt-8 text-center text-sm text-gray-400">
+            &copy; {new Date().getFullYear()} Thipe Youth Golf Academy. All Rights Reserved.
+        </div>
+      </div>
+    </footer>
+  );
+};
+
+export default Footer;
