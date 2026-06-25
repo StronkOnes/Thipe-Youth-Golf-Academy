@@ -4,7 +4,7 @@ import React, { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { MOCK_EVENTS } from '../constants';
 import { Event } from '../types';
-import { useAuth } from '../contexts/AuthContext';
+import { useAuth } from '../../contexts/AuthContext';
 import { TrashIcon } from './icons';
 import ImageUploader from './ImageUploader';
 import { usePersistentState } from '../hooks/usePersistentState';
@@ -56,7 +56,7 @@ const EventModal: React.FC<{ event: Event, onClose: () => void }> = ({ event, on
         <div className="fixed inset-0 bg-black/60 z-50 flex items-center justify-center p-4" onClick={onClose}>
             <div className="bg-white dark:bg-gray-900 rounded-xl shadow-2xl w-full max-w-3xl max-h-[90vh] overflow-y-hidden flex flex-col animate-fade-in-down" onClick={e => e.stopPropagation()}>
                 <div className="relative">
-                    <img className="w-full h-64 object-cover rounded-t-xl" src={event.imageUrl} alt={event.title} />
+                    <img className="w-full h-96 object-cover rounded-t-xl" src={event.imageUrl} alt={event.title} />
                     <button onClick={onClose} className="absolute top-3 right-3 bg-white/70 rounded-full p-2 text-gray-800 hover:bg-white transition-transform transform hover:scale-110">
                         <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
@@ -102,7 +102,7 @@ const EventCard: React.FC<{ event: Event; onLearnMore: (event: Event) => void; o
         </button>
     )}
     <div className="overflow-hidden">
-        <img className="w-full h-56 object-cover transform group-hover:scale-110 transition-transform duration-500" src={event.imageUrl} alt={event.title} />
+        <img className="w-full h-80 object-cover transform group-hover:scale-110 transition-transform duration-500" src={event.imageUrl} alt={event.title} />
     </div>
     <div className="p-6 flex flex-col flex-grow">
       <p className="text-tyga-secondary font-semibold mb-1">{event.date}</p>
@@ -116,7 +116,7 @@ const EventCard: React.FC<{ event: Event; onLearnMore: (event: Event) => void; o
 );
 
 const EventsPage: React.FC = () => {
-  const [events, setEvents] = usePersistentState<Event[]>('tyga_events', MOCK_EVENTS);
+  const [events, setEvents] = usePersistentState<Event[]>('tyga_events_v2', MOCK_EVENTS);
   const [selectedEvent, setSelectedEvent] = useState<Event | null>(null);
   const [showAddModal, setShowAddModal] = useState(false);
   const { isAuthenticated } = useAuth();

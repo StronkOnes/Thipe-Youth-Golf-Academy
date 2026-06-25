@@ -4,7 +4,7 @@ import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { MOCK_SPONSORS } from '../constants';
 import { Sponsor } from '../types';
-import { useAuth } from '../contexts/AuthContext';
+import { useAuth } from '../../contexts/AuthContext';
 import { TrashIcon } from './icons';
 import ImageUploader from './ImageUploader';
 

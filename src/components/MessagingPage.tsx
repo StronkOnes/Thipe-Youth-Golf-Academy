@@ -2,7 +2,7 @@
 import React, { useState, useRef, useEffect, useCallback, useMemo } from 'react';
 import { MOCK_CONVERSATIONS, MOCK_USER, MOCK_COACH, MOCK_USERS, MOCK_STUDENTS, MOCK_PACKAGES, MOCK_LESSONS, MOCK_SWING_ANALYSIS_REQUESTS } from '../constants';
 import { Conversation, Message, User, UserRole, SwingAnalysisRequest, SwingAnalysisStatus, Student } from '../types';
-import { generateAIMessage, analyzeSwing } from '../services/geminiService';
+import { generateAIMessage, analyzeSwing } from '../../services/geminiService';
 import { PaperClipIcon, ArrowDownTrayIcon, SparklesIcon, SendIcon, TelegramIcon, WhatsAppIcon } from './icons';
 
 // --- LOCAL ICONS (from former SwingAnalysisPage) ---

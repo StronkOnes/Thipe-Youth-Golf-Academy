@@ -15,7 +15,7 @@ const Footer: React.FC = () => {
                 <TygaLogo className="h-16 w-auto mb-4" variant="light" />
               </Link>
             <p className="text-sm text-gray-400">
-                Promoting golf for personal development, leadership skills, sportsmanship, and teamwork
+                Introducing golf in township schools, creating leagues, and developing young leaders through the values of the game.
             </p>
           </div>
           <div className="md:col-span-1">
@@ -37,7 +37,12 @@ const Footer: React.FC = () => {
           </div>
           <div className="md:col-span-1">
              <h3 className="font-bold font-display text-lg text-white mb-4">Get In Touch</h3>
-             <a href="https://wa.me/27123456789" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 bg-green-500 text-white font-semibold py-2 px-4 rounded-lg hover:bg-green-600 transition-colors">
+             <div className="space-y-2 text-gray-300 text-sm">
+                <p>310 Phase 2, Diepkloof</p>
+                <p>Johannesburg 1864</p>
+                <p>065 528 7081</p>
+             </div>
+             <a href="https://wa.me/27655287081" target="_blank" rel="noopener noreferrer" className="mt-3 inline-flex items-center gap-2 bg-green-500 text-white font-semibold py-2 px-4 rounded-lg hover:bg-green-600 transition-colors">
                 <WhatsAppIcon className="h-5 w-5"/>
                 <span>WhatsApp Us</span>
             </a>

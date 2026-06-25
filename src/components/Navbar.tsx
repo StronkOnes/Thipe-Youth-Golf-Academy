@@ -3,8 +3,8 @@
 import React from 'react';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { NAV_LINKS } from '../constants';
-import { useAuth } from '../contexts/AuthContext';
-import { useTheme } from '../contexts/ThemeContext';
+import { useAuth } from '../../contexts/AuthContext';
+import { useTheme } from '../../contexts/ThemeContext';
 import TygaLogo from './TygaLogo';
 
 // Icons for theme toggle

@@ -11,8 +11,8 @@ import GalleryPage from './components/GalleryPage';
 import EventsPage from './components/EventsPage';
 import ContactPage from './components/ContactPage';
 import LoginPage from './components/LoginPage';
-import { AuthProvider } from './contexts/AuthContext';
-import { ThemeProvider } from './contexts/ThemeContext';
+import { AuthProvider } from '../contexts/AuthContext';
+import { ThemeProvider } from '../contexts/ThemeContext';
 
 const ScrollToTop = () => {
   const { pathname } = useLocation();

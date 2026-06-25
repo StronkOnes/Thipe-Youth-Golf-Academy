@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 
-const DEFAULT_LOGO = "https://www.imgchest.com/p/92493pb2v4n";
+const DEFAULT_LOGO = "/TYGAtransparent.png";
 
 interface TygaLogoProps {
   className?: string;

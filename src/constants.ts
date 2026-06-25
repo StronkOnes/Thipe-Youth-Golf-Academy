@@ -3,7 +3,6 @@ import { User, UserRole, Student, Package, Lesson, LessonStatus, Sponsor, Event,
 export const NAV_LINKS = [
   { name: 'Home', path: '/' },
   { name: 'About', path: '/about' },
-  { name: 'Sponsors', path: '/sponsors' },
   { name: 'Events', path: '/events' },
   { name: 'Gallery', path: '/gallery' },
   { name: 'Onboarding', path: '/onboarding' },
@@ -39,10 +38,11 @@ export const MOCK_LESSONS: Lesson[] = [
 ];
 
 export const MOCK_SPONSORS: Sponsor[] = [
-  { id: 'sp1', name: 'GolfPro Gear', logoUrl: 'https://i.imgur.com/L12sE1g.png', website: '#' },
-  { id: 'sp2', name: 'Greenway Fields', logoUrl: 'https://i.imgur.com/kS5kLdU.png', website: '#' },
-  { id: 'sp3', name: 'Champion Drinks', logoUrl: 'https://i.imgur.com/k1x1s2z.png', website: '#' },
-  { id: 'sp4', name: 'Future Sports Foundation', logoUrl: 'https://i.imgur.com/8QpW5gR.png', website: '#' },
+  { id: 'sp1', name: 'Zodwa Khoza Foundation', logoUrl: '/sponsors/sponsor1.png', website: '#' },
+  { id: 'sp2', name: 'City of Johannesburg', logoUrl: '/sponsors/sponsor2.jpg', website: '#' },
+  { id: 'sp3', name: 'Pay it Forward Jozi', logoUrl: '/sponsors/sponsor3.png', website: '#' },
+  { id: 'sp4', name: 'Dept of Sports & Recreation', logoUrl: '/sponsors/sponsor4.jpeg', website: '#' },
+  { id: 'sp5', name: 'Johannesburg Country Club', logoUrl: '/sponsors/sponsor5.jpeg', website: '#' },
 ];
 
 export const MOCK_EVENTS: Event[] = [
@@ -50,67 +50,80 @@ export const MOCK_EVENTS: Event[] = [
     id: 'evt1', 
     title: 'Weekly Lessons', 
     date: 'Ongoing Enrollment', 
-    imageUrl: 'https://images.unsplash.com/photo-1622447036420-a63953e34b7f?q=80&w=1740&auto=format&fit=crop', 
-    posterUrl: 'https://images.unsplash.com/photo-1587174486929-2348216c52a3?q=80&w=1740&auto=format&fit=crop',
-    description: `Our weekly lessons form the core of the TYGA experience. We provide structured, year-round training that focuses on consistent improvement and a deep love for the game.
+    imageUrl: '/events/weekly-lessons.jpeg', 
+    posterUrl: '/events/weekly-lessons.jpeg',
+    description: `Our training program is tailored to school-going students' needs and interests. We incorporate technology into every session, with facilities including:
+    - Putting Green
+    - Driving Range Nets
+    - Digital Tracking and Analysis using launch monitors and swing trackers
     
-    Each session is designed to build upon the last, ensuring a steady progression of skills. Our expert coaches work with small groups to provide personalized feedback and attention. The curriculum covers all aspects of golf, including:
-    - Full Swing Mechanics
-    - Short Game (Putting, Chipping, Pitching)
-    - Course Management and Strategy
-    - Rules and Etiquette
-    - Mental Fortitude and Focus
-    
-    We believe that greatness is built one swing at a time. Our program is perfect for young golfers of all skill levels who are committed to learning and growing in a supportive, professional environment. Join us to build a foundation for a lifetime of success, both on and off the course.` 
+    Our custom app allows parents, coaches, and students to manage competition preparation, goals, communication, and video analysis. Parents can remotely view communications between the student and coach, and manage payments and donations.` 
   },
   { 
     id: 'evt2', 
-    title: '2025 Open Day', 
+    title: 'Golf Day', 
     date: 'August 15, 2025', 
-    imageUrl: 'https://images.unsplash.com/photo-1535131749006-b7f58c99034b?q=80&w=1740&auto=format&fit=crop', 
-    posterUrl: 'https://images.unsplash.com/photo-1535131749006-b7f58c99034b?q=80&w=1740&auto=format&fit=crop',
-    description: `Join us for a fun-filled day of golf, clinics, and meeting the coaches. Open to all aspiring young golfers, our 2025 Open Day is a fantastic opportunity for prospective students and their parents to experience the TYGA culture.
+    imageUrl: '/events/golf-day.png', 
+    posterUrl: '/events/golf-day.png',
+    description: `Join us for our annual Golf Day — a day of friendly competition, clinics, and community. We host this event in partnership with local schools and organizations to promote golf and raise funds for youth development.
     
-    Tour our state-of-the-art facilities at the Zodwa Khoza Centre and participate in introductory sessions led by our head coaches. The day's activities include:
-    - Free introductory golf clinics
+    The day's activities include:
+    - Golf clinics and introductory sessions
     - Putting and chipping competitions with exciting prizes
-    - A showcase of our current students' talents
-    - An information session about our programs and curriculum for the upcoming year
-    - A free sausage sizzle for all attendees!
+    - A showcase of our students' talents
+    - Networking with partners and sponsors
+    - The winner receives a golfing scholarship and a prize donated to their school
     
-    This is the perfect chance to see what makes TYGA a special place for youth development. Come and discover how we are shaping the next generation of champions.` 
+    This is our flagship fundraising and awareness event. Come be part of something transformative.` 
   },
   { 
     id: 'evt3', 
-    title: '2026 TYGA Launch', 
+    title: 'TYGA Launch', 
     date: 'January 20, 2026', 
-    imageUrl: 'https://images.unsplash.com/photo-1562713697-a745fb33635a?q=80&w=1740&auto=format&fit=crop', 
-    posterUrl: 'https://images.unsplash.com/photo-1610623349760-536f0386013a?q=80&w=1762&auto=format&fit=crop',
-    description: `Celebrating the official launch and expansion of the Thipe Youth Golf Academy! This landmark event marks a new chapter in our commitment to youth empowerment through golf.
+    imageUrl: '/events/tyga-poster.png', 
+    posterUrl: '/events/tyga-poster.png',
+    description: `Celebrating the launch of the Thipe Youth Golf Academy! This landmark event marks a new chapter in our mission to introduce golf in township schools and develop young leaders through sport.
     
-    We will be joined by special guests, community leaders, and our sponsors to commemorate this milestone. The event will feature:
-    - A keynote address from our founder, Johnathan Smith
-    - Announcements of new programs and partnerships
+    The event will feature:
+    - A keynote address from our founder, Dennis Ndau
+    - Announcements of new programs and partnerships with key organizations
     - A formal introduction of our coaching staff and leadership team
-    - An exclusive workshop for our students on discipline, focus, and career planning beyond golf, with guest speakers from various professional fields.
+    - An exclusive workshop on discipline, focus, and career planning
     
-    The launch event reinforces our dedication to holistic development, equipping our students with valuable life skills that are transferable to any career path they choose. Be part of the moment we tee off our future.` 
+    Our launch reinforces our commitment to youth development, equipping students with life skills that are transferable to any career path. Be part of the moment we tee off our future.` 
   },
 ];
 
 export const MOCK_GALLERY: GalleryItem[] = [
-  { id: 'gal1', imageUrl: 'https://images.unsplash.com/photo-1593807318451-0375d045d58c?q=80&w=1740&auto=format&fit=crop', caption: 'Focused on the perfect putt.', uploadDate: '2024-07-10' },
-  { id: 'gal2', imageUrl: 'https://images.unsplash.com/photo-1622447036398-383c5144f808?q=80&w=1740&auto=format&fit=crop', caption: 'Sharing a laugh on the fairway.', uploadDate: '2024-07-09' },
-  { id: 'gal3', imageUrl: 'https://images.unsplash.com/photo-1556708599-22a38b4a20b7?q=80&w=1740&auto=format&fit=crop', caption: 'Power and precision in every swing.', uploadDate: '2024-07-08' },
-  { id: 'gal4', imageUrl: 'https://images.unsplash.com/photo-1500932382256-54a7b0a726ee?q=80&w=1740&auto=format&fit=crop', caption: 'Learning the fundamentals from day one.', uploadDate: '2024-07-07' },
-  { id: 'gal5', imageUrl: 'https://images.unsplash.com/photo-1616588252277-c3b04badf329?q=80&w=1740&auto=format&fit=crop', caption: 'Guidance from a coach makes all the difference.', uploadDate: '2024-07-06' },
-  { id: 'gal6', imageUrl: 'https://images.unsplash.com/photo-1575429323133-c75b8e4e7e4a?q=80&w=1740&auto=format&fit=crop', caption: 'Our future champions in the making.', uploadDate: '2024-07-05' },
+  { id: 'gal1', imageUrl: '/gallery/gallery-1.jpeg', caption: 'TYGA in action on the course.', uploadDate: '2025-06-25' },
+  { id: 'gal2', imageUrl: '/gallery/gallery-2.jpeg', caption: 'Young golfers taking aim.', uploadDate: '2025-06-25' },
+  { id: 'gal3', imageUrl: '/gallery/gallery-3.jpeg', caption: 'Practice makes perfect.', uploadDate: '2025-06-25' },
+  { id: 'gal4', imageUrl: '/gallery/gallery-4.jpeg', caption: 'Learning the fundamentals.', uploadDate: '2025-06-25' },
+  { id: 'gal5', imageUrl: '/gallery/gallery-5.jpeg', caption: 'Team TYGA on the green.', uploadDate: '2025-06-25' },
+  { id: 'gal6', imageUrl: '/gallery/gallery-6.jpeg', caption: 'Focused swing practice.', uploadDate: '2025-06-25' },
+  { id: 'gal7', imageUrl: '/gallery/gallery-7.jpeg', caption: 'Junior golf development.', uploadDate: '2025-06-25' },
+  { id: 'gal8', imageUrl: '/gallery/gallery-8.jpeg', caption: 'Coaching session in progress.', uploadDate: '2025-06-25' },
+  { id: 'gal9', imageUrl: '/gallery/gallery-9.jpeg', caption: 'On the fairway together.', uploadDate: '2025-06-25' },
+  { id: 'gal10', imageUrl: '/gallery/gallery-10.jpeg', caption: 'Building future champions.', uploadDate: '2025-06-25' },
+  { id: 'gal11', imageUrl: '/gallery/gallery-11.jpeg', caption: 'Group training day.', uploadDate: '2025-06-25' },
+  { id: 'gal12', imageUrl: '/gallery/gallery-12.jpeg', caption: 'Mastering the short game.', uploadDate: '2025-06-25' },
+  { id: 'gal13', imageUrl: '/gallery/gallery-13.jpeg', caption: 'Putting practice session.', uploadDate: '2025-06-25' },
+  { id: 'gal14', imageUrl: '/gallery/gallery-14.jpeg', caption: 'TYGA students and coaches.', uploadDate: '2025-06-25' },
+  { id: 'gal15', imageUrl: '/gallery/gallery-15.jpeg', caption: 'Swing analysis in action.', uploadDate: '2025-06-25' },
+  { id: 'gal16', imageUrl: '/gallery/gallery-16.jpeg', caption: 'Community and camaraderie.', uploadDate: '2025-06-25' },
+  { id: 'gal17', imageUrl: '/gallery/gallery-17.jpeg', caption: 'Learning together on the course.', uploadDate: '2025-06-25' },
+  { id: 'gal18', imageUrl: '/gallery/gallery-18.jpeg', caption: 'Golf skills development.', uploadDate: '2025-06-25' },
+  { id: 'gal19', imageUrl: '/gallery/gallery-19.jpeg', caption: 'Youth golf league action.', uploadDate: '2025-06-25' },
+  { id: 'gal20', imageUrl: '/gallery/gallery-20.jpeg', caption: 'Team photo session.', uploadDate: '2025-06-25' },
+  { id: 'gal21', imageUrl: '/gallery/gallery-21.jpeg', caption: 'TYGA training facility.', uploadDate: '2025-06-25' },
+  { id: 'gal22', imageUrl: '/gallery/gallery-22.jpeg', caption: 'Celebrating progress together.', uploadDate: '2025-06-25' },
 ];
 
 export const MOCK_TEAM: TeamMember[] = [
-    { id: 'team1', name: 'Johnathan Smith', role: 'Founder & Head Coach', bio: 'A former professional golfer with a passion for youth development, Johnathan founded TYGA to create pathways to success for the next generation.', photoUrl: 'https://picsum.photos/seed/team1/400' },
-    { id: 'team2', name: 'Maria Garcia', role: 'Operations Director', bio: 'Maria brings over 15 years of experience in non-profit management, ensuring TYGA runs smoothly and achieves its strategic goals.', photoUrl: 'https://picsum.photos/seed/team2/400' },
-    { id: 'team3', name: 'David Chen', role: 'Senior Coach', bio: 'David is a certified coach specializing in biomechanics and mental fortitude, helping students unlock their full potential on and off the course.', photoUrl: 'https://picsum.photos/seed/team3/400' },
+    { id: 'team1', name: 'Dennis Ndau', role: 'Founder', bio: 'Founder of TYGA, dedicated to empowering youth through golf and creating life-changing opportunities for the next generation.', photoUrl: '/team/dennis-ndau.png' },
+    { id: 'team2', name: 'Tshiya Ngatane', role: 'Program Director', bio: 'Passionate about youth development and ensuring every student reaches their full potential on and off the course.', photoUrl: '/team/tshiya-ngatane.png' },
+    { id: 'team3', name: 'Siphiwo Kobese', role: 'Head Coach', bio: 'Experienced golf professional committed to developing young talent through technical excellence and mental fortitude.', photoUrl: '/team/siphiwo-kobese.png' },
+    { id: 'team4', name: 'Bonang Nkiti', role: 'Operations Manager', bio: 'Ensuring the academy runs smoothly and creates a welcoming environment for all students, parents, and partners.', photoUrl: '/team/bonang-nkiti.png' },
 ];
 
 export const MOCK_CONVERSATIONS: Conversation[] = [

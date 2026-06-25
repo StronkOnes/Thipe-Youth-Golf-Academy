@@ -66,10 +66,10 @@ const ContactPage: React.FC = () => {
                     <div className="lg:col-span-2 space-y-8">
                         <div className="p-6 bg-tyga-light dark:bg-gray-800 rounded-lg shadow-md">
                            <h3 className="text-xl font-bold font-display text-tyga-dark dark:text-white mb-4 border-b dark:border-gray-700 pb-2">Contact Information</h3>
-                           <p className="text-gray-700 dark:text-gray-300"><strong>Address:</strong> Zodwa Khoza Centre, Soweto, South Africa</p>
+                           <p className="text-gray-700 dark:text-gray-300"><strong>Address:</strong> 310 Phase 2, Diepkloof, Johannesburg 1864</p>
                            <p className="text-gray-700 dark:text-gray-300"><strong>Email:</strong> info@tygachamps.co.za</p>
-                           <p className="text-gray-700 dark:text-gray-300"><strong>Phone:</strong> (123) 456-7890</p>
-                            <a href="https://wa.me/27123456789" target="_blank" rel="noopener noreferrer" className="mt-4 w-full flex items-center justify-center gap-2 py-3 px-4 border border-transparent rounded-md shadow-sm text-lg font-medium text-white bg-green-500 hover:bg-green-600 transition-colors">
+                           <p className="text-gray-700 dark:text-gray-300"><strong>Phone:</strong> 065 528 7081</p>
+                            <a href="https://wa.me/27655287081" target="_blank" rel="noopener noreferrer" className="mt-4 w-full flex items-center justify-center gap-2 py-3 px-4 border border-transparent rounded-md shadow-sm text-lg font-medium text-white bg-green-500 hover:bg-green-600 transition-colors">
                                 <WhatsAppIcon className="h-6 w-6" />
                                 <span>Message on WhatsApp</span>
                             </a>

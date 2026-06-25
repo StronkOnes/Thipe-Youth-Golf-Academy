@@ -4,7 +4,7 @@ import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { MOCK_SPONSORS } from '../constants';
 import { Sponsor } from '../types';
-import { useAuth } from '../contexts/AuthContext';
+import { useAuth } from '../../contexts/AuthContext';
 import { TrashIcon } from './icons';
 import ImageUploader from './ImageUploader';
 import { usePersistentState } from '../hooks/usePersistentState';
@@ -75,9 +75,9 @@ const SponsorsPage: React.FC = () => {
       {showAddModal && <AddSponsorModal onCancel={() => setShowAddModal(false)} onSubmit={handleAddSponsor} />}
       <div className="container mx-auto px-6">
         <div className="text-center mb-16 animate-fade-in-down">
-          <h1 className="text-4xl font-bold font-display tracking-tight text-tyga-dark dark:text-white sm:text-6xl">Our Valued Sponsors</h1>
+          <h1 className="text-4xl font-bold font-display tracking-tight text-tyga-dark dark:text-white sm:text-6xl">Our Valued Partners</h1>
           <p className="mt-6 text-xl text-gray-600 dark:text-gray-300">
-            We are incredibly grateful for the support of our sponsors, who are pivotal in empowering youth through golf.
+            We are incredibly grateful for the support of our partners, who are pivotal in empowering youth through golf.
           </p>
         </div>
         

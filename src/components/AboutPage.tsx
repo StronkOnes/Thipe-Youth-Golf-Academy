@@ -4,16 +4,16 @@ import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { MOCK_TEAM } from '../constants';
 import { TeamMember } from '../types';
-import { useAuth } from '../contexts/AuthContext';
+import { useAuth } from '../../contexts/AuthContext';
 import ImageUploader from './ImageUploader';
 import SiteBrandingManager from './SiteBrandingManager';
 import { usePersistentState } from '../hooks/usePersistentState';
 
 const TeamMemberCard: React.FC<{ member: TeamMember }> = ({ member }) => (
     <div className="bg-white dark:bg-gray-900 rounded-lg shadow-lg overflow-hidden group transform hover:-translate-y-2 transition-transform duration-300">
-        <div className="relative h-64">
-            <img className="w-full h-full object-cover object-center" src={member.photoUrl} alt={member.name} />
-            <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent"></div>
+        <div className="relative h-80 bg-gray-100 dark:bg-gray-800">
+            <img className="w-full h-full object-contain" src={member.photoUrl} alt={member.name} />
+            <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent pointer-events-none"></div>
             <div className="absolute bottom-0 left-0 p-6 w-full transform translate-y-12 sm:translate-y-16 group-hover:translate-y-0 transition-transform duration-500 ease-in-out">
                 <h3 className="text-xl font-bold text-white font-display">{member.name}</h3>
                 <p className="text-tyga-secondary font-semibold">{member.role}</p>
@@ -66,7 +66,7 @@ const AddMemberModal: React.FC<{ onCancel: () => void, onSubmit: (member: Omit<T
 const AboutPage: React.FC = () => {
     const { isAuthenticated } = useAuth();
     const navigate = useNavigate();
-    const [team, setTeam] = usePersistentState<TeamMember[]>('tyga_team', MOCK_TEAM);
+    const [team, setTeam] = usePersistentState<TeamMember[]>('tyga_team_v2', MOCK_TEAM);
     const [showModal, setShowModal] = useState(false);
 
     const handleAddMember = (newMember: Omit<TeamMember, 'id'>) => {
@@ -95,13 +95,13 @@ const AboutPage: React.FC = () => {
             <h1 className="text-4xl font-bold font-display tracking-tight text-tyga-dark dark:text-white sm:text-5xl mb-6">About TYGA</h1>
             <div className="space-y-4 text-gray-700 dark:text-gray-300">
               <p>
-                Thipe Youth Golf Academy (TYGA) is an innovative youth golf development academy focused on junior golf development for disadvantaged kids, utilizing golf as a vehicle to instill personal growth, skills development, and community engagement.
+                Thipe Youth Golf Academy (TYGA) is a program designed to introduce golf as a sport in township schools, create a golf league in schools, and use golf principles to change the mindset of the youth from an early age to adulthood.
               </p>
               <p className="font-semibold text-tyga-primary dark:text-tyga-secondary">
-                Our mission is to empower disadvantaged youth through golf, fostering personal growth, leadership development, and community engagement.
+                Our vision is to have a golf coaching program in schools, partnering with schools for sports days, and hosting an annual golf day where the winner earns a golfing scholarship and a prize for their school.
               </p>
               <p>
-                We believe that by fostering a love for the game and teaching life skills, we can empower young people to excel not only in sports but in all areas of their lives, contributing positively to their communities.
+                We measure our success by the number of students who go through our academy and become great social and competitive players. Most importantly, we aim to groom young boys and girls to excel at a sport that represents good values, discipline, and focus — growing into respectable gentlemen and ladies who positively influence their communities.
               </p>
             </div>
           </div>
@@ -115,7 +115,7 @@ const AboutPage: React.FC = () => {
           <h2 className="text-4xl font-bold font-display tracking-tight text-tyga-dark dark:text-white sm:text-5xl">Meet Our Team</h2>
           <p className="mt-4 text-xl text-gray-600 dark:text-gray-300">The dedicated individuals driving our mission forward.</p>
         </div>
-        <div className="grid md:grid-cols-3 gap-8">
+        <div className="grid md:grid-cols-4 gap-8">
             {team.map(member => (
                 <TeamMemberCard key={member.id} member={member} />
             ))}
